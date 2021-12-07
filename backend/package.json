@@ -1,0 +1,23 @@
+{
+  "name": "opina-cidadao-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lucas Manerich",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --ignore *.json ./src/index.js",
+    "start": "node ./src/index.js",
+    "docs": "apidoc -f ./src/controller -o docs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "lowdb": "1.0.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.50.2",
+    "nodemon": "^2.0.15"
+  }
+}

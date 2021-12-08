@@ -3,7 +3,7 @@ const EnqueteRepository = require("../repository/EnqueteRepository");
 module.exports = {
   
   /**
-   * @api {get} /enquete Listar as Enquetes
+   * @api {get} /enquente Listar as Enquetes
    * @apiGroup Enquentes
    * @apiDescription Endpoint de listagem de enquentes
    * 
@@ -24,17 +24,7 @@ module.exports = {
     return response.json(enquetes);
   },
 
-  /**
-   * @api {post} /enquete Incluir enquente
-   * @apiGroup Enquentes
-   * @apiDescription Endpoint de listagem de enquentes
-   * 
-   * @apiSuccessExample {json} Sucesso
-   *    HTTP/1.1 200 OK
-   *    {
-   *      "sucesso": true
-   *    }
-   */
+  
   incluirEnquete(request, response) {
     const { titulo, data_limite } = request.body;
     

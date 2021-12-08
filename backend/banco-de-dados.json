@@ -1,0 +1,28 @@
+{
+  "enquetes": [
+    {
+      "id": 1,
+      "titulo": "Qual a prioridade para o bairro budag?",
+      "situacao": "Disponivel",
+      "dataLimite": "10/12/2021",
+      "perguntas": [
+        {
+          "titulo": "Segurança Pública",
+          "opcoes": [
+            "Novas Viaturas para a GCM",
+            "Instalação de câmeras na área central",
+            "etc"
+          ]
+        },
+        {
+          "titulo": "Bairro Budag",
+          "opcoes": [
+            "Novas Viaturas para a GCM",
+            "Instalação de câmeras na área central",
+            "etc"
+          ]
+        }
+      ]
+    }
+  ]
+}

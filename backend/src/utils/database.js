@@ -6,6 +6,6 @@ const adapter = new FileSync('banco-de-dados.json');
 const db = low(adapter);
 
 // cria a estrutura padrao da base dados
-db.defaults({ enquentes: [] }).write()
+db.defaults({ enquetes: [] }).write()
 
 module.exports = db;

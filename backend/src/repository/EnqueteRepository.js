@@ -35,8 +35,19 @@ const EnqueteRepository = {
     return item
   },
 
-  inserePergunta() {
-    
+  /**
+   * Insere uma pergunta nas enquentes
+   */
+  inserePergunta(id, titulo, opcoes) {
+    const enquete = db.get('enquetes').find({ id }).value();
+    const perguntas = enquete.perguntas || [];
+
+    perguntas.push({
+      titulo,
+      opcoes,
+    })
+
+    db.get('enquetes').find({ id }).assign({ perguntas }).write();
   },
 
   /**
@@ -44,6 +55,14 @@ const EnqueteRepository = {
    */
   getEnquetes() {
     return db.get('enquetes').value();
+  },
+
+  /**
+   * Retorna todas as perguntas da enquete
+   */
+  getPerguntasFromEnquete(id) {
+    const dados = db.get('enquetes').find({ id }).value();
+    return dados.perguntas || [];
   },
 
   /**
